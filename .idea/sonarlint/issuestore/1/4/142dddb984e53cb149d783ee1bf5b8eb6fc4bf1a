@@ -1,0 +1,17 @@
+
+o
+java:S1450
+"SRemove the "num1" field and declare it as a local variable in the relevant methods.(¡ü´n8 ¥¾§Ø1
+u
+java:S1450"SRemove the "num2" field and declare it as a local variable in the relevant methods.(ËÛÙ’þÿÿÿÿ8¡¥¾§Ø1
+q
+java:S1450	"TRemove the "vidas" field and declare it as a local variable in the relevant methods.(ÿ²×„8¡¥¾§Ø1
+V
+java:S3400("9Remove this method and declare a constant for this value.(”·³›8¸†Á§Ø1
+F
+java:S1068	")Remove this unused "vidas" private field.(ÿ²×„8´¥¾§Ø1
+D
+java:S1068
+"(Remove this unused "num1" private field.(¡ü´n8µ¥¾§Ø1
+J
+java:S1068"(Remove this unused "num2" private field.(ËÛÙ’þÿÿÿÿ8µ¥¾§Ø1

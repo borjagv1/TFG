@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main_activity.java">MainActivity.java</string>
+    <string name="mate_mente">Mate-Mente</string>
+    <string name="volumeoff">VolumeOff</string>
+    <string name="aprendizaje_de_matematicas">Aprendizaje de Matemáticas</string>
+    <string name="adivinar_con_vidas">Adivinar Con Vidas</string>
+    <string name="sin_vidas">Sin Vidas</string>
+</resources>

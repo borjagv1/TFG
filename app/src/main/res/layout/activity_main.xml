@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/material_dynamic_tertiary50">
+
+    <!-- Botón de silenciar -->
+    <!--            android:src="@drawable/ic_Volume_Off"-->
+
+    <ImageButton
+            android:id="@+id/btnMute"
+            android:layout_width="94dp"
+            android:layout_height="82dp"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
+            android:contentDescription="@string/volumeoff"
+            android:layout_gravity="end|top"/>
+
+    <!-- Título -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mate_mente"
+            android:textSize="45sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="80dp"
+            android:layout_gravity="center"/>
+
+
+    <!-- Botones -->
+    <Button
+            android:id="@+id/btnAprender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aprendizaje_de_matematicas"
+            android:layout_gravity="center"/>
+
+    <Button
+            android:id="@+id/btnAdivinarConVidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adivinar_con_vidas"
+            android:layout_gravity="center"/>
+
+    <Button
+            android:id="@+id/btnNoLives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sin_vidas"
+            android:layout_gravity="center"/>
+</LinearLayout>
