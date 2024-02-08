@@ -13,3 +13,5 @@ Uapp/src/main/java/com/example/myapplication/ui/AdivinarResultadoConVidasActivit
 Uapp/src/main/java/com/example/myapplication/ui/AdivinarResultadoSinVidasActivity.java,8\2\827b45c6103e3fdab21dae68260adbcbfa9b1b2d
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+p
+@app/src/test/java/com/example/myapplication/ExampleUnitTest.java,f\7\f7b02976154252e44c8b6f323b0f856285e18e7d
