@@ -47,3 +47,5 @@ G.idea/sonarlint/issuestore/f/7/f7b02976154252e44c8b6f323b0f856285e18e7d,9\3\93
 Q.idea/sonarlint/securityhotspotstore/c/a/cae5e65167e64f0ad30496f68a80c89703d2df36,d\8\d8cf83074ccf2b1aaa3a45ff85b4bd1b1b458c2a
 Å
 Q.idea/sonarlint/securityhotspotstore/f/7/f7b02976154252e44c8b6f323b0f856285e18e7d,8\1\818b198f46a293b5b1d0a1f51d3eeb6e74cb4a3a
+q
+Aapp/src/main/java/com/example/myapplication/ui/bd/MyDbHelper.java,1\6\168dc47a7c7a02262256b25184433c708beee53c

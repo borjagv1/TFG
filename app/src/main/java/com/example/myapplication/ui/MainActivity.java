@@ -10,7 +10,6 @@ import com.example.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
-
     private boolean isMuted = false;
 
     @Override
@@ -20,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
         configurarMediaPlayer();
         funcionamientoBotonSilenciar();
-        configurarListeners();
     }
 
     private void configurarMediaPlayer() {
@@ -49,27 +47,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void configurarListeners() {
-        // Botones para navegar a las otras actividades
-        Button btnAprender = findViewById(R.id.btnAprender);
-        Button btnAdivinarConVidas = findViewById(R.id.btnAdivinarConVidas);
-        Button btnAdivinarSinVidas = findViewById(R.id.btnNoLives);
-
-        btnAprender.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AprenderActivity2.class);
-            startActivity(intent);
-        });
-
-        btnAdivinarConVidas.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AdivinarResultadoConVidasActivity.class);
-            startActivity(intent);
-        });
-
-        btnAdivinarSinVidas.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AdivinarResultadoSinVidasActivity.class);
-            startActivity(intent);
-        });
-    }
     // OnDestroy es un método que se llama cuando la actividad está a punto de ser destruida
     // El ejemplo claro es cuando pulsamos atrás en el móvil
     @Override

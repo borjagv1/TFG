@@ -13,11 +13,6 @@
             android:theme="@style/Theme.MyApplication"
             tools:targetApi="31">
         <activity
-                android:name=".ui.AprenderActivity2"
-                android:exported="false"
-                android:label="@string/title_activity_aprender2"
-                android:theme="@style/Theme.MyApplication.NoActionBar"/>
-        <activity
                 android:name=".ui.MainActivity"
                 android:exported="true"
                 android:label="@string/title_activity_main_activity.java"
@@ -28,9 +23,5 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.AprenderActivity"/>
-        <activity android:name=".ui.AdivinarResultadoConVidasActivity"/>
-        <activity android:name=".ui.AdivinarResultadoSinVidasActivity"/>
     </application>
-
 </manifest>
