@@ -7,4 +7,27 @@
     <string name="aprendizaje_de_matematicas">Aprendizaje de Matemáticas</string>
     <string name="adivinar_con_vidas">Adivinar Con Vidas</string>
     <string name="sin_vidas">Sin Vidas</string>
+    <string name="menu_lateral">Menú Lateral</string>
+    <string name="suma">Suma</string>
+    <string name="resta">Resta</string>
+    <string name="multiplicacion">Multiplicación</string>
+    <string name="division">division</string>
+    <string name="triangulo">triangulo</string>
+    <string name="cuadrado">cuadrado</string>
+    <string name="rectangulo">rectangulo</string>
+    <string name="circulo">circulo</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="imagen_explicativa_suma">Imagen Explicativa Suma</string>
+    <string name="imagen_explicativa_resta">Imagen Explicativa Resta</string>
+    <string name="imagen_explicativa_multiplicacion">Imagen Explicativa Multiplicacion</string>
+    <string name="title_activity_aprender2">AprenderActivity2</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/menu_suma"
+                android:title="@string/suma"/>
+        <item
+                android:id="@+id/menu_resta"
+                android:title="@string/resta"/>
+        <item
+                android:id="@+id/menu_multiplicacion"
+                android:title="@string/multiplicacion"/>
+        <item
+                android:id="@+id/menu_division"
+                android:title="@string/division"/>
+        <item
+                android:id="@+id/menu_triangulo"
+                android:title="@string/triangulo"/>
+        <item
+                android:id="@+id/menu_cuadrado"
+                android:title="@string/cuadrado"/>
+        <item
+                android:id="@+id/menu_rectangulo"
+                android:title="@string/rectangulo"/>
+        <item
+                android:id="@+id/menu_circulo"
+                android:title="@string/circulo"/>
+        <!-- Añadir más algo de geometría o alguna operación más -->
+    </group>
+</menu>

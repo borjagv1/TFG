@@ -15,16 +15,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ImageButton btnMute;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        configurarMediaPlayer();
+        funcionamientoBotonSilenciar();
+        configurarListeners();
+    }
+
+    private void configurarMediaPlayer() {
         // Reproducir música de fondo
         // Inicializar MediaPlayer
         mediaPlayer = MediaPlayer.create(this, R.raw.autumn_sunset);
         mediaPlayer.setLooping(true); // Repetir la música en bucle
         mediaPlayer.start(); // Comenzar a reproducir la música
+    }
 
+    private void funcionamientoBotonSilenciar() {
+        ImageButton btnMute;
         // Referenciar el botón de silenciar
         btnMute = findViewById(R.id.btnMute);
         btnMute.setOnClickListener(v -> {
@@ -41,20 +49,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (mediaPlayer != null) {
-            mediaPlayer.release(); // Liberar recursos cuando la actividad se destruye
-        }
-
+    private void configurarListeners() {
         // Botones para navegar a las otras actividades
         Button btnAprender = findViewById(R.id.btnAprender);
         Button btnAdivinarConVidas = findViewById(R.id.btnAdivinarConVidas);
         Button btnAdivinarSinVidas = findViewById(R.id.btnNoLives);
 
         btnAprender.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AprenderActivity.class);
+            Intent intent = new Intent(MainActivity.this, AprenderActivity2.class);
             startActivity(intent);
         });
 
@@ -67,5 +69,16 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, AdivinarResultadoSinVidasActivity.class);
             startActivity(intent);
         });
+    }
+    // OnDestroy es un método que se llama cuando la actividad está a punto de ser destruida
+    // El ejemplo claro es cuando pulsamos atrás en el móvil
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.release(); // Liberar recursos cuando la actividad termina
+        }
+
+
     }
 }

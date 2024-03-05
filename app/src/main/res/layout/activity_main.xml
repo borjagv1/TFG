@@ -30,7 +30,7 @@
             android:layout_gravity="center"/>
 
 
-    <!-- Botones -->
+    <!-- Botones de la Pantalla principal-->
     <Button
             android:id="@+id/btnAprender"
             android:layout_width="wrap_content"
