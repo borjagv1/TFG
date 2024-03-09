@@ -1,4 +1,4 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.ui.register;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.ui.MainActivity;
 import com.example.myapplication.ui.bd.MyDbHelper;
 import com.example.myapplication.ui.bd.Session;
 /**
@@ -20,8 +21,8 @@ import com.example.myapplication.ui.bd.Session;
  * author Borja Guerra
  */
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText etEmail;
-    private EditText etPassword;
+    private EditText editTextEmail;
+    private EditText editTextPassword;
     private MyDbHelper db;
     private Session session;
 
@@ -39,8 +40,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         session = new Session(this);
         Button btnLogin = findViewById(R.id.btnLogin);
         Button btnRegister = findViewById(R.id.btnRegistro);
-        etEmail = findViewById(R.id.etEmail);
-        etPassword = findViewById(R.id.etPassword);
+        editTextEmail = findViewById(R.id.etEmail);
+        editTextPassword = findViewById(R.id.etPassword);
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
         if (session.loggedIn()) {
@@ -74,8 +75,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * Comprueba si el usuario y contraseña son correctos.
      */
     public void login(View v) {
-        String email = etEmail.getText().toString();
-        String password = etPassword.getText().toString();
+        String email = editTextEmail.getText().toString();
+        String password = editTextPassword.getText().toString();
         if (db.getUserFromDataBase(email, password)) {
             session.setLoggedIn(true);
             displayToast("Login correcto");

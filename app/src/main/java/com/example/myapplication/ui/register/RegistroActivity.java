@@ -1,4 +1,4 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.ui.register;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,8 +18,8 @@ import com.example.myapplication.ui.bd.MyDbHelper;
  * author Borja Guerra
  */
 public class RegistroActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText etEmail;
-    private EditText etPass;
+    private EditText editTextEmail;
+    private EditText editTextPassword;
     private MyDbHelper db;
 
     /**
@@ -34,11 +34,11 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
 
         db = new MyDbHelper(this);
         Button btnRegistro = findViewById(R.id.btnRegistro);
-        TextView tvLogin = findViewById(R.id.tvLogin);
-        etEmail = findViewById(R.id.etEmail);
-        etPass = findViewById(R.id.etPass);
+        TextView textViewLogin = findViewById(R.id.tvLogin);
+        editTextEmail = findViewById(R.id.etEmail);
+        editTextPassword = findViewById(R.id.etPass);
         btnRegistro.setOnClickListener(this);
-        tvLogin.setOnClickListener(this);
+        textViewLogin.setOnClickListener(this);
     }
 
 
@@ -63,14 +63,16 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
      * Si no, registra el usuario y muestra un mensaje de éxito.
      */
     private void registrar() {
-        String email = etEmail.getText().toString();
-        String pass = etPass.getText().toString();
+        String email = editTextEmail.getText().toString();
+        String pass = editTextPassword.getText().toString();
         if (email.isEmpty() || pass.isEmpty()) {
             displayToast("Email/Contraseña no pueden estar vacíos");
         } else {
             db.addUserDetails(email, pass);
             displayToast("Usuario registrado");
-            finish(); // TODO - ¿Por qué se cierra la actividad? ¿No debería ir a la pantalla de login?
+            // back to log activity after registering
+            startActivity(new Intent(RegistroActivity.this, LoginActivity.class));
+            finish();
         }
     }
 

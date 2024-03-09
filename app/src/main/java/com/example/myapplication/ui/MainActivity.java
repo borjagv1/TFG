@@ -3,12 +3,16 @@ package com.example.myapplication.ui;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.ui.bd.Session;
+import com.example.myapplication.ui.niveles.Nivel1Activity;
+import com.example.myapplication.ui.niveles.Nivel2Activity;
+import com.example.myapplication.ui.niveles.Nivel3Activity;
+import com.example.myapplication.ui.register.LoginActivity;
+
 /**
  * Clase que gestiona la actividad principal.
  * @version 1.0
@@ -35,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
         if (!session.loggedIn()) {
             logout();
         }
+
+        configurarListenersBotones();
+    }
+    // javadoc
+    /**
+     * Método que configura los listeners de los botones.
+     * @see Nivel1Activity
+     * @see Nivel2Activity
+     * @see Nivel3Activity
+     * @see ForoActivity
+     * @see DesarrolladorActivity
+     * @see Session
+     * @see MediaPlayer
+     * @see LoginActivity
+     */
+    private void configurarListenersBotones() {
         // Botón 1 - Nivel 1
         Button btnNivel1 = findViewById(R.id.button);
         btnNivel1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Nivel1Activity.class)));
@@ -54,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> logout());
     }
+
     /**
      * Método que se ejecuta al pulsar el botón de logout.
      */
@@ -65,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método que inicializa el MediaPlayer y reproduce la música de fondo.
+     * @see MediaPlayer
      */
     private void configurarMediaPlayer() {
         // Reproducir música de fondo
@@ -76,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método que gestiona el funcionamiento del botón de silenciar.
+     *
      */
     private void funcionamientoBotonSilenciar() {
         ImageButton btnMute;
@@ -100,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método que se ejecuta cuando la actividad está a punto de ser destruida.
+     * Se encarga de liberar los recursos del MediaPlayer.
+     * @see MediaPlayer
      */
     @Override
     protected void onDestroy() {
