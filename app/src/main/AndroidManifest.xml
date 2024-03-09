@@ -13,9 +13,8 @@
             android:theme="@style/Theme.MyApplication"
             tools:targetApi="31">
         <activity
-                android:name=".ui.MainActivity"
+                android:name=".ui.IntroActivity"
                 android:exported="true"
-                android:label="@string/title_activity_main_activity.java"
                 android:theme="@style/Theme.MyApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -23,5 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.LoginActivity"/>
+        <activity android:name=".ui.MainActivity"/>
+        <activity android:name=".ui.RegistroActivity"/>
+        <activity android:name=".ui.Nivel1Activity"/>
+        <activity android:name=".ui.Nivel2Activity"/>
+        <activity android:name=".ui.Nivel3Activity"/>
+        <activity android:name=".ui.ForoActivity"/>
+        <activity android:name=".ui.DesarrolladorActivity"/>
     </application>
 </manifest>

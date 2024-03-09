@@ -1,54 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:background="@color/material_dynamic_tertiary50">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_main">
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:id="@+id/scrollView">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    tools:ignore="UselessParent">
+                <!-- Botón de silenciar -->
+                <ImageButton
+                        android:id="@+id/btnMute"
+                        android:layout_width="94dp"
+                        android:layout_height="82dp"
+                        android:src="@drawable/ic_volume_off"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="80dp"
+                        android:contentDescription="@string/volumeoff"
+                        android:layout_gravity="end|top"/>
 
-    <!-- Botón de silenciar -->
-    <ImageButton
-            android:id="@+id/btnMute"
-            android:layout_width="94dp"
-            android:layout_height="82dp"
-            android:src="@drawable/ic_volume_off"
-            android:scaleType="fitXY"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="80dp"
-            android:contentDescription="@string/volumeoff"
-            android:layout_gravity="end|top"/>
+                <!-- Título -->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mate_mente"
+                        android:textSize="45sp"
+                        android:textColor="@color/purple_200"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="80dp"
+                        android:layout_gravity="center"/>
+                <!-- Botones de la Pantalla principal-->
+                <Button
+                        android:text="@string/level_1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/button"/>
+                <Button
+                        android:text="@string/level_2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:layout_marginTop="45dp"
+                        android:id="@+id/button2"/>
 
-    <!-- Título -->
-    <TextView
+                <Button
+                        android:text="@string/level_3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:layout_marginTop="45dp"
+                        android:id="@+id/button3"/>
+
+                <Button
+                        android:text="@string/foro"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:layout_marginTop="45dp"
+                        android:id="@+id/button4"/>
+
+                <Button
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:background="@drawable/boton_desarrollador"
+                        android:layout_marginTop="45dp"
+                        android:id="@+id/button5"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+            android:id="@+id/btnLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mate_mente"
-            android:textSize="45sp"
+            android:text="@string/logout"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginBottom="80dp"
-            android:layout_gravity="center"/>
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
 
-
-    <!-- Botones de la Pantalla principal-->
-    <Button
-            android:id="@+id/btnAprender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/aprendizaje_de_matematicas"
-            android:layout_gravity="center"/>
-
-    <Button
-            android:id="@+id/btnAdivinarConVidas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/adivinar_con_vidas"
-            android:layout_gravity="center"/>
-
-    <Button
-            android:id="@+id/btnNoLives"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sin_vidas"
-            android:layout_gravity="center"/>
-</LinearLayout>
+</RelativeLayout>
