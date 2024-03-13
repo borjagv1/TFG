@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_foro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".ui.guia_mail.GuiaMatesMailActivity">
+
+    <TextView
+            android:text="Fórmulas"
+            android:background="@color/md_indigo_A100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/md_black_1000_50"
+            android:id="@+id/textView111"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                <TextView
+                        android:text="(1) Trigonometría : "
+                        android:scrollIndicators="bottom"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_900"
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/imagen_geometria"
+                        android:id="@+id/imageView"
+                        android:contentDescription="Imagen de geometría"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/md_blue_grey_900"
+                        android:textStyle="bold"
+                        android:text="(1.1) AREA DEL CIRCULO\n CIRCUNFERENCIA DEL CIRCULO\n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/md_brown_500"
+                        android:textStyle="italic"
+                        android:text="(2)\n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_green_500"
+                        android:text="(3)\n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="(4)\n"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="italic"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="(5)\n"
+                        android:textStyle="normal"
+                        android:textColor="@color/md_blue_900"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/md_yellow_A700"
+                        android:textStyle="italic"
+                        android:text="(6)\n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/md_red_900"
+                        android:textStyle="bold"
+                        android:text="(7)\n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textStyle="italic"
+                        android:textColor="@color/md_light_green_900"
+                        android:text="(8)\n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_brown_500_75"
+                        android:text="(9) \n"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="(10) \n"
+                        android:textColor="@color/md_black_1000_50"
+                        android:textStyle="italic"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:backgroundTint="@color/md_indigo_A100"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                android:src="@drawable/imagen_icono_correo"
+                android:id="@+id/fabbotoncitomail"
+                android:contentDescription="@string/imagen_del_e_mail"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

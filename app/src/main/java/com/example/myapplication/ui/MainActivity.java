@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.ui.bd.Session;
+import com.example.myapplication.ui.guia_mail.GuiaMatesMailActivity;
 import com.example.myapplication.ui.niveles.Nivel1Activity;
 import com.example.myapplication.ui.niveles.Nivel2Activity;
 import com.example.myapplication.ui.niveles.Nivel3Activity;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
      * @see Nivel1Activity
      * @see Nivel2Activity
      * @see Nivel3Activity
-     * @see ForoActivity
+     * @see GuiaMatesMailActivity
      * @see DesarrolladorActivity
      * @see Session
      * @see MediaPlayer
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btnNivel3.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Nivel3Activity.class)));
         // Botón 4 - Foro
         Button btnForo = findViewById(R.id.button4);
-        btnForo.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ForoActivity.class)));
+        btnForo.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, GuiaMatesMailActivity.class)));
         // Botón 5 - Desarrollador
         Button btnDesarrollador = findViewById(R.id.button5);
         btnDesarrollador.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DesarrolladorActivity.class)));

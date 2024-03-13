@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_enviar_correo"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@color/md_brown_200"
+                tools:context=".ui.guia_mail.EnviarCorreoActivity">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/env_ame_una_sugerencia_puedes_enviarme_un_correo_a_la_direcci_n"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:id="@+id/textviewmail"
+            android:textColor="@color/md_red_900"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:scrollbars="vertical"
+            android:id="@+id/scrollView">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                    android:text="@string/correoElectronico"
+                    android:hint="@string/e_mail_enviar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/editText" android:autofillHints="Tu e-mail"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/Asunto"
+                    android:ems="10"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/editText2" android:autofillHints="Breve descripción del correo"/>
+
+            <EditText
+                    android:hint="@string/mensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:lines="5"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/editText3" android:autofillHints="Tu mensaje"/>
+
+            <Button
+                    android:text="@string/Enviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="60dp"
+                    android:id="@+id/button"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
