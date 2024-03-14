@@ -4,10 +4,8 @@
     <string name="title_activity_main_activity.java">MainActivity.java</string>
     <string name="mate_mente">Mate-Mente</string>
     <string name="volumeoff">VolumeOff</string>
-    <string name="level_1">Level-1</string>
-    <string name="level_2">Level-2</string>
-    <string name="level_3">Level-3</string>
-    <string name="foro">Foro</string>
+    <string name="nivel_1">Desafío</string>
+    <string name="foro">Aprende</string>
     <string name="logout">Salir</string>
     <string name="password"><i>Contraseña</i></string>
     <string name="email_phone"><i>Email/Teléfono</i></string>
@@ -31,4 +29,35 @@
     <string name="Enviar">Enviar</string>
     <string name="Asunto">Asunto</string>
     <string name="imagen_del_e_mail">Imagen del e-mail</string>
+    <string name="problemas_matem_ticos_nivel_f_cil">Problemas Matemáticos (Nivel - Fácil)</string>
+    <string name="_2_m_nimo_com_n_m_ltiplo_de_2_5_7">(2) ¿Mínimo Común Múltiplo de 2, 5 y 7 = ?</string>
+    <string name="Resp"><i>Respuesta</i></string>
+    <string name="confirmar">Confirmar</string>
+    <string name="_3_m_ximo_com_n_divisor_de_2_3_5_y_13">(3) ¿ Máximo Común Divisor de 2, 3, 5 y 13 ?</string>
+    <string name="logros">Ver Puntuación</string>
+    <string name="_4_suponiendo_a_b_c_6_a_b_a_c_b_c_y_a_b_c_son_positivos_cu_nto_vale_a">
+        (4) Suponiendo a + b + c = 6, a > b, a > c, b > c y a, b y c son positivos, ¿cuánto vale a ?</string>
+    <string name="_1_cu_l_es_el_n_mero_primo_m_s_peque_o">(1) ¿Cuál es el número primo más pequeño?</string>
+    <string name="trofeo">¿Premio?</string>
+    <string name="imagen_de_geometr_a">Imagen de geometría</string>
+    <string name="trigonometr_a">Trigonometría :</string>
+    <string name="gu_a_para_las_actividades_de_matem_ticas">GUÍA PARA LAS ACTIVIDADES DE MATEMÁTICAS</string>
+    <string name="definicion_primo"><b>( 1 )</b> Números Primos: Definición\n En matemáticas, un número primo es un número
+        natural mayor que 1 que tiene únicamente dos divisores positivos distintos: él mismo y el 1.​ Por el contrario,
+        los números compuestos son los números naturales que tienen algún divisor natural aparte de sí mismos y del 1,
+        y, por lo tanto, pueden factorizarse.
+    </string>
+    <string name="mcm">m.c.m.(12, 18) = 2^2 * 3^2 = 4 * 9 = 36</string>
+    <string name="definicion_mcm"><b>( 2 )</b> En matemáticas, el mínimo común múltiplo de dos o más números naturales es el
+        menor múltiplo común de todos ellos. Este concepto está ligado con las fracciones de números naturales, pero se
+        puede usar también para enteros negativos o números complejos. \nEs el número más pequeño de los múltiplos
+        comunes: \n\n-> Descomposición factorial de ambos números en factores primos:
+    </string>
+    <string name="definicion_mcd"><b>( 3 )</b> En las matemáticas, se define el máximo común divisor de dos o más números
+        enteros al mayor número entero que los divide sin dejar resto alguno.\n
+    </string>
+    <string name="imagen_mcd">Imagen MCD</string>
+    <string name="mcd">M.C.D.(18, 24) = 2 * 3 = 6\n<u>-----------------------------------------------------------------------------</u></string>
+    <string name="reas_y_vol_menes">Áreas y Volúmenes</string>
+    <string name="sugerencias">Envíame tus sugerencias para la guía pulsando el botón del correo</string>
 </resources>

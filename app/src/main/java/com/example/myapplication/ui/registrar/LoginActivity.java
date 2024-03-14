@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.register;
+package com.example.myapplication.ui.registrar;
 
 import android.content.Intent;
 import android.os.Bundle;

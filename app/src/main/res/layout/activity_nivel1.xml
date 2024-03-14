@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_amber_100">
+    <TextView
+            android:text="@string/problemas_matem_ticos_nivel_f_cil"
+            android:background="@color/md_pink_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@color/md_brown_500"
+            android:id="@+id/textView111"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:scrollbars="vertical"
+            android:id="@+id/scrollView">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <!--1-->
+            <TextView
+                    android:text="@string/_1_cu_l_es_el_n_mero_primo_m_s_peque_o"
+                    android:textColor="@color/md_blue_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"/>
+
+            <!--singleLine es para limitar la escritura a una sola linea-->
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:id="@+id/editPregunta1"
+                    android:hint="@string/Resp"
+                    android:textColorHint="@color/md_blue_A400"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp" android:autofillHints=""/>
+
+
+            <Button
+                    android:text="@string/confirmar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_800"
+                    android:textStyle="italic"
+                    android:id="@+id/button1"/>
+
+
+            <!--2-->
+            <TextView
+                    android:text="@string/_2_m_nimo_com_n_m_ltiplo_de_2_5_7"
+                    android:textColor="@color/md_green_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"/>
+            <!--singleLine es para limitar la escritura a una sola linea-->
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:id="@+id/editPregunta2"
+                    android:hint="@string/Resp"
+                    android:textColorHint="@color/md_blue_A400"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp" android:autofillHints=""/>
+            <Button
+                    android:text="@string/confirmar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_800"
+                    android:textStyle="italic"
+                    android:id="@+id/button2"/>
+
+            <!--3-->
+            <TextView
+                    android:text="@string/_3_m_ximo_com_n_divisor_de_2_3_5_y_13"
+                    android:textColor="@color/md_blue_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"/>
+
+            <!--singleLine es para limitar la escritura a una sola linea-->
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:id="@+id/editPregunta3"
+                    android:hint="@string/Resp"
+                    android:textColorHint="@color/md_blue_A400"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp" android:autofillHints=""/>
+
+            <Button
+                    android:text="@string/confirmar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_800"
+                    android:textStyle="italic"
+                    android:id="@+id/button3"/>
+
+            <!--4-->
+            <TextView
+                    android:text="@string/_4_suponiendo_a_b_c_6_a_b_a_c_b_c_y_a_b_c_son_positivos_cu_nto_vale_a"
+                    android:textColor="@color/md_green_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"/>
+            <!--singleLine es para limitar la escritura a una sola linea-->
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:id="@+id/editPregunta4"
+                    android:hint="@string/Resp"
+                    android:textColorHint="@color/md_blue_A400"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp" android:autofillHints=""/>
+            <Button
+                    android:text="@string/confirmar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_800"
+                    android:textStyle="italic"
+                    android:id="@+id/button4"/>
+            <Button
+                    android:text="@string/trofeo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/md_blue_800"
+                    android:textStyle="italic"
+                    android:id="@+id/premiar" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!--Marcador-->
+    <Button
+            android:id="@+id/marcador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logros"
+            android:textColor="@color/md_pink_900"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+</RelativeLayout>

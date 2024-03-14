@@ -22,14 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.register.LoginActivity"/>
+        <activity android:name=".ui.registrar.LoginActivity"/>
         <activity android:name=".ui.MainActivity"/>
-        <activity android:name=".ui.register.RegistroActivity"/>
+        <activity android:name=".ui.registrar.RegistroActivity"/>
         <activity android:name=".ui.niveles.Nivel1Activity"/>
-        <activity android:name=".ui.niveles.Nivel2Activity"/>
-        <activity android:name=".ui.niveles.Nivel3Activity"/>
         <activity android:name=".ui.guia_mail.GuiaMatesMailActivity"/>
-        <activity android:name=".ui.DesarrolladorActivity"/>
         <activity android:name=".ui.guia_mail.EnviarCorreoActivity"/>
     </application>
 </manifest>

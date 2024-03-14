@@ -10,9 +10,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.ui.bd.Session;
 import com.example.myapplication.ui.guia_mail.GuiaMatesMailActivity;
 import com.example.myapplication.ui.niveles.Nivel1Activity;
-import com.example.myapplication.ui.niveles.Nivel2Activity;
-import com.example.myapplication.ui.niveles.Nivel3Activity;
-import com.example.myapplication.ui.register.LoginActivity;
+import com.example.myapplication.ui.registrar.LoginActivity;
 
 /**
  * Clase que gestiona la actividad principal.
@@ -47,10 +45,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método que configura los listeners de los botones.
      * @see Nivel1Activity
-     * @see Nivel2Activity
-     * @see Nivel3Activity
      * @see GuiaMatesMailActivity
-     * @see DesarrolladorActivity
      * @see Session
      * @see MediaPlayer
      * @see LoginActivity
@@ -59,18 +54,9 @@ public class MainActivity extends AppCompatActivity {
         // Botón 1 - Nivel 1
         Button btnNivel1 = findViewById(R.id.button);
         btnNivel1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Nivel1Activity.class)));
-        // Botón 2 - Nivel 2
-        Button btnNivel2 = findViewById(R.id.button2);
-        btnNivel2.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Nivel2Activity.class)));
-        // Botón 3 - Nivel 3
-        Button btnNivel3 = findViewById(R.id.button3);
-        btnNivel3.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Nivel3Activity.class)));
-        // Botón 4 - Foro
-        Button btnForo = findViewById(R.id.button4);
+       // Botón 2 - Guía y Mail
+        Button btnForo = findViewById(R.id.button2);
         btnForo.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, GuiaMatesMailActivity.class)));
-        // Botón 5 - Desarrollador
-        Button btnDesarrollador = findViewById(R.id.button5);
-        btnDesarrollador.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DesarrolladorActivity.class)));
         // Botón de logout
         Button btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> logout());

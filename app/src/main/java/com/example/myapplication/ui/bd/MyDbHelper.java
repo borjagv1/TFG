@@ -29,6 +29,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
     public static final String C_ID = "_id";
     public static final String C_EMAIL = "email";
     public static final String C_PASSWORD = "password";
+    public static final int MARCADOR = 0;
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " (" + C_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + C_EMAIL + " TEXT, " + C_PASSWORD + " TEXT);";
 
     /**
