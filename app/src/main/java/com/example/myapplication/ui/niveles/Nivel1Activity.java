@@ -11,21 +11,38 @@ import com.example.myapplication.R;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+/**
+ * Actividad nivel 1 de la aplicación.
+ * Esta actividad contiene preguntas y respuestas interactivas para el usuario.
+ * Al responder correctamente, el usuario puede acumular puntos y recibir premios.
+ *
+ * @author Borja Guerra
+ * @version 1.0
+ */
 public class Nivel1Activity extends AppCompatActivity {
     /**
-     * Set de enteros que almacena los logros de respuestas.
+     * Conjunto que almacena los índices de las respuestas correctas.
      */
     final Set<Integer> linkedHashSetCorrectas = new LinkedHashSet<>();
-
+    /**
+     * Array que almacena el número de veces que se ha pulsado EL BOTÓN de responder.
+     */
     public int[] contadorDePulsado = new int[10000];
+    /**
+     * Array que almacena el estado de las respuestas.
+     */
     public int[] flag = new int[10000];
-
 
     {
         reiniciarContadores();
     }
 
-
+    /**
+     * Método que se ejecuta al crear la actividad.
+     *
+     * @param savedInstanceState Si la actividad se reanuda, se recibe el último estado aquí.
+     *                           Método que se ejecuta al crear la actividad.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +52,6 @@ public class Nivel1Activity extends AppCompatActivity {
 
 
         // PARA PREGUNTA - 1
-
         final Button buttonPregunta1 = findViewById(R.id.button1);
         final EditText inputPregunta1 = findViewById(R.id.editPregunta1);
 
@@ -170,135 +186,130 @@ public class Nivel1Activity extends AppCompatActivity {
             }
 
         });
-
-    // Marcador
-    Button marcador = findViewById(R.id.marcador);
+        // Marcador
+        Button marcador = findViewById(R.id.marcador);
         marcador.setOnClickListener(view -> mostrarMarcadores());
-    //Award
-    Button award = findViewById(R.id.premiar);
+        //Award
+        Button award = findViewById(R.id.premiar);
         award.setOnClickListener(view -> listaPremios());
 
 
-}
-
-public void mostrarMarcadores() {
-    int marcador;
-    int respuestasCorr = linkedHashSetCorrectas.size();
-    marcador = respuestasCorr * 10;
-
-    Toast.makeText(getApplicationContext(), "Puntuación Total : " + marcador, Toast.LENGTH_SHORT).show();
-}
-
-public void mostrarCorrecto(String view) {
-
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("¡Enhorabuena, respuesta correcta!")
-            .setPositiveButton("Continuar...", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("¡BIEN!")
-            .setIcon(R.drawable.checkok)
-            .create();
-    mensaje.show();
-
-}
-
-public void mostrarIncorrecto(String view) {
-
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("¡Vaya! Respuesta Incorrecta")
-            .setPositiveButton("Inténtalo de nuevo...", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("¡No! Incorrecto")
-            .setIcon(R.drawable.checknotcorrect)
-            .create();
-    mensaje.show();
-
-}
-
-public void reiniciarContadores() {
-    for (int i = 0; i < contadorDePulsado.length; i++) {
-        contadorDePulsado[i] = 0;
-        flag[i] = 0;
     }
 
-}
+    /**
+     * Método que muestra el marcador de respuestas correctas.
+     * Muestra un mensaje emergente con la puntuación total.
+     *
+     * @see Toast
+     * @see LinkedHashSet
+     */
+    public void mostrarMarcadores() {
+        int marcador;
+        int respuestasCorr = linkedHashSetCorrectas.size();
+        marcador = respuestasCorr * 10;
 
-public void listaPremios() {
-    int size = linkedHashSetCorrectas.size();
-    int marcador;
-    marcador = size * 10;
-    if (marcador >= 0 && marcador <= 40) {
-        novato(marcador);
-    } else if (marcador == 50) {
-        aprendiz(marcador);
-    } else if (marcador == 60) {
-        especialista(marcador);
-    } else if (marcador == 70) {
-        experto(marcador);
-    } else if (marcador >= 80 && marcador <= 100) {
-        maestro(marcador);
-    } else if (marcador >= 110 && marcador <= 200) {
-        granmaestro(marcador);
+        Toast.makeText(getApplicationContext(), "Puntuación Total : " + marcador, Toast.LENGTH_SHORT).show();
     }
-}
 
-public void novato(int marcadores) {
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("Eres Novato en el Nivel - 1" + " y puntúas : " + marcadores)
-            .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("NOVATO")
-            .setIcon(R.drawable.novato)
-            .create();
-    mensaje.show();
-}
+    /**
+     * Método que muestra un mensaje emergente con la respuesta correcta.
+     *
+     * @param view Vista de la actividad.
+     * @see AlertDialog
+     */
+    public void mostrarCorrecto(String view) {
 
-public void aprendiz(int marcadores) {
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("Eres Aprendiz en el Nivel - 1" + " y puntúas : " + marcadores)
-            .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("APRENDIZ")
-            .setIcon(R.drawable.aprendiz)
-            .create();
-    mensaje.show();
-}
+        AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
+        mensaje.setMessage("¡Enhorabuena, respuesta correcta!")
+                .setPositiveButton("Continuar...", (dialogInterface, i) -> dialogInterface.dismiss())
+                .setTitle("¡BIEN!")
+                .setIcon(R.drawable.checkok)
+                .create();
+        mensaje.show();
 
-public void especialista(int marcadores) {
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("Eres Especialista en el Nivel - 1" + " y puntúas : " + marcadores)
-            .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("ESPECIALISTA")
-            .setIcon(R.drawable.especialista)
-            .create();
-    mensaje.show();
-}
+    }
 
-public void experto(int marcadores) {
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("Eres Experto en el Nivel - 1" + " y puntúas : " + marcadores)
-            .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("EXPERTO")
-            .setIcon(R.drawable.experto)
-            .create();
-    mensaje.show();
-}
+    /**
+     * Método que muestra un mensaje emergente con la respuesta incorrecta.
+     *
+     * @param view Vista de la actividad.
+     * @see AlertDialog
+     */
+    public void mostrarIncorrecto(String view) {
 
-public void maestro(int marcadores) {
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("Eres Maestro en el Nivel - 1" + " y puntúas : " + marcadores)
-            .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("MAESTRO")
-            .setIcon(R.drawable.master)
-            .create();
-    mensaje.show();
-}
+        AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
+        mensaje.setMessage("¡Vaya! Respuesta Incorrecta")
+                .setPositiveButton("Inténtalo de nuevo...", (dialogInterface, i) -> dialogInterface.dismiss())
+                .setTitle("¡No! Incorrecto")
+                .setIcon(R.drawable.checknotcorrect)
+                .create();
+        mensaje.show();
 
-public void granmaestro(int marcadores) {
-    AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
-    mensaje.setMessage("Eres Gran Maestro en el Nivel - 1" + " y puntúas : " + marcadores)
-            .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
-            .setTitle("GRAN MAESTRO")
-            .setIcon(R.drawable.granmaestro)
-            .create();
-    mensaje.show();
-}
+    }
 
+    /**
+     * Método que reinicia los contadores de pulsado y los flags.
+     */
+    public void reiniciarContadores() {
+        for (int i = 0; i < contadorDePulsado.length; i++) {
+            contadorDePulsado[i] = 0;
+            flag[i] = 0;
+        }
+    }
+
+    /**
+     * Método que muestra un mensaje emergente con el premio obtenido.
+     */
+    public void listaPremios() {
+        int size = linkedHashSetCorrectas.size();
+        int marcador;
+        marcador = size * 10;
+        if (marcador >= 0 && marcador <= 10) {
+            novato(marcador);
+        } else if (marcador == 20) {
+            aprendiz(marcador);
+        } else if (marcador == 30) {
+            especialista(marcador);
+        } else if (marcador == 40) {
+            experto(marcador);
+        }
+    }
+
+
+    public void novato(int marcadores) {
+        mostrarPremio("novato", marcadores, R.drawable.novato);
+    }
+
+    public void aprendiz(int marcadores) {
+        mostrarPremio("aprendiz", marcadores, R.drawable.aprendiz);
+    }
+
+    public void especialista(int marcadores) {
+        mostrarPremio("especialista", marcadores, R.drawable.especialista);
+    }
+
+    public void experto(int marcadores) {
+        mostrarPremio("experto", marcadores, R.drawable.experto);
+    }
+
+
+
+    /**
+     * Método genérico que muestra un mensaje emergente con el premio obtenido.
+     *
+     * @param premio     Nombre del premio.
+     * @param marcadores Puntuación total.
+     * @param icono      Ícono del premio.
+     * @see AlertDialog
+     */
+    private void mostrarPremio(String premio, int marcadores, int icono) {
+        AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
+        mensaje.setMessage("Eres " + premio + " en el Nivel - 1" + " y puntúas : " + marcadores)
+                .setPositiveButton("Salir", (dialogInterface, i) -> dialogInterface.dismiss())
+                .setTitle(premio.toUpperCase())
+                .setIcon(icono)
+                .create();
+        mensaje.show();
+    }
 } // Fin de la clase Nivel1Activity
 
