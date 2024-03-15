@@ -196,7 +196,7 @@ public class Nivel1Activity extends AppCompatActivity {
                 mostrarIncorrecto("inc");
             }
             // Si se ha pulsado 3 veces, se muestra un mensaje emergente con la respuesta correcta
-            if (contadorDePulsado[4] == 4) {
+            if (contadorDePulsado[4] == 3) {
                 Toast.makeText(getApplicationContext(), "La Respuesta es: 3", Toast.LENGTH_LONG).show();
                 contadorDePulsado[4] = 0;
                 controlPregunta[4] = 1;

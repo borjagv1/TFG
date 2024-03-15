@@ -17,6 +17,7 @@ import com.example.myapplication.ui.bd.MyDbHelper;
  * @see MyDbHelper
  * author Borja Guerra
  */
+// TODO CONTROLAR QUE SE INTRODUCE UN MAIL CORRECTO.
 public class RegistroActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextEmail;
     private EditText editTextPassword;
