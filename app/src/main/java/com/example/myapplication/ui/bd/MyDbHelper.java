@@ -21,7 +21,6 @@ public class MyDbHelper extends SQLiteOpenHelper {
     public MyDbHelper(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
-
     public static final String TAG = MyDbHelper.class.getSimpleName();
     public static final String DB_NAME = "mydb.db";
     public static final int DB_VERSION = 1;

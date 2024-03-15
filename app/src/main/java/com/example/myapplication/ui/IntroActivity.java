@@ -40,6 +40,7 @@ public class IntroActivity extends AppCompatActivity {
                 finish();
             }
         };
+        // Creo un temporizador que ejecute el método run de timerTask después de SPLASH_TIME milisegundos.
         Timer timer = new Timer();
         timer.schedule(timerTask, SPLASH_TIME);
     }

@@ -15,6 +15,9 @@ Context context;
     /**
      * Constructor.
      * @param context The context.
+     * Se hace uso de SharedPreferences, ya que
+     * Permite almacenar y recuperar datos de manera
+     * Persistente en forma de pares clave-valor. Se utiliza comúnmente para almacenar preferencias de la aplicación, como configuraciones del usuario, estados de inicio de sesión, preferencias personalizadas, etc.
      */
     public Session(Context context) {
         sharedPreferences = context.getSharedPreferences("mydb", Context.MODE_PRIVATE);

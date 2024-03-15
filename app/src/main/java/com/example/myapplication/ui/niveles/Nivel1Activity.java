@@ -21,7 +21,9 @@ import java.util.Set;
  */
 public class Nivel1Activity extends AppCompatActivity {
     /**
-     * Conjunto que almacena los índices de las respuestas correctas.
+     * Conjunto que almacena el n.º de las respuestas correctas.
+     * @see LinkedHashSet Mantiene el orden de inserción.
+     * @see Set Interfaz que no permite elementos duplicados.
      */
     final Set<Integer> linkedHashSetCorrectas = new LinkedHashSet<>();
     /**
@@ -29,9 +31,12 @@ public class Nivel1Activity extends AppCompatActivity {
      */
     public int[] contadorDePulsado = new int[10000];
     /**
-     * Array que almacena el estado de las respuestas.
+     * Array que almacena el estado de las respuestas según la pregunta en la que estoy
+     * P. ej. controlPregunta[1] = 0 → No ha respondido a la pregunta 1 o ha respondido de forma correcta.
+     * Si es 1 → Se ha respondido de forma incorrecta tres veces y ya no se puede responder.
+     * Controla el estado de las preguntas y evita que el usuario responda más de tres veces incorrectamente.
      */
-    public int[] flag = new int[10000];
+    public int[] controlPregunta = new int[10000];
 
     {
         reiniciarContadores();
@@ -39,9 +44,7 @@ public class Nivel1Activity extends AppCompatActivity {
 
     /**
      * Método que se ejecuta al crear la actividad.
-     *
      * @param savedInstanceState Si la actividad se reanuda, se recibe el último estado aquí.
-     *                           Método que se ejecuta al crear la actividad.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,34 +59,35 @@ public class Nivel1Activity extends AppCompatActivity {
         final EditText inputPregunta1 = findViewById(R.id.editPregunta1);
 
         buttonPregunta1.setOnClickListener(arg0 -> {
-
+            // Si es correcto se deshabilita el campo de texto y el botón
             if (inputPregunta1.getText().toString().equals("2")) {
                 inputPregunta1.setEnabled(false);
                 buttonPregunta1.setBackgroundResource(R.drawable.correcto);
                 buttonPregunta1.setEnabled(false);
-
-                if (flag[1] == 0) {
+                // Si no está en el conjunto de respuestas correctas, añade el n.º de la pregunta
+                if (controlPregunta[1] == 0) {
                     linkedHashSetCorrectas.add(1);
-
                 }
-
                 mostrarCorrecto("cor");
 
             } else {
+                // Si es incorrecto se suma 1 al contador de pulsado
                 contadorDePulsado[1] += 1;
+                // Si se ha pulsado 3 veces, se deshabilita el campo de texto y el botón
                 if (contadorDePulsado[1] == 3) {
                     Toast.makeText(getApplicationContext(), "La Respuesta es: 2", Toast.LENGTH_LONG).show();
-                    flag[1] = 1;
+                    controlPregunta[1] = 1;
                     inputPregunta1.setEnabled(false);
                     buttonPregunta1.setBackgroundResource(R.drawable.incorrecto);
                     buttonPregunta1.setEnabled(false);
                 }
                 mostrarIncorrecto("inc");
             }
+            // Si se ha pulsado 3 veces, se muestra un mensaje emergente con la respuesta correcta
             if (contadorDePulsado[1] == 3) {
                 Toast.makeText(getApplicationContext(), "La Respuesta es: 2", Toast.LENGTH_LONG).show();
                 contadorDePulsado[1] = 0;
-                flag[1] = 1;
+                controlPregunta[1] = 1;
             }
         });
 
@@ -92,32 +96,35 @@ public class Nivel1Activity extends AppCompatActivity {
         final EditText inputPregunta2 = findViewById(R.id.editPregunta2);
 
         buttonPregunta2.setOnClickListener(arg0 -> {
-
+            // Si es correcto se deshabilita el campo de texto y el botón
             if (inputPregunta2.getText().toString().equals("70")) {
                 inputPregunta2.setEnabled(false);
                 buttonPregunta2.setBackgroundResource(R.drawable.correcto);
                 buttonPregunta2.setEnabled(false);
 
+                // Si no está en el conjunto de respuestas correctas, añade el n.º de la pregunta
                 mostrarCorrecto("cor");
-                if (flag[2] == 0) {
+                if (controlPregunta[2] == 0) {
                     linkedHashSetCorrectas.add(2);
                 }
 
-
             } else {
+                // Si es incorrecto se suma 1 al contador de pulsado
                 contadorDePulsado[2] = contadorDePulsado[2] + 1;
+                // Si se ha pulsado 3 veces, se deshabilita el campo de texto y el botón
                 if (contadorDePulsado[2] == 3) {
-                    flag[2] = 1;
+                    controlPregunta[2] = 1;
                     inputPregunta2.setEnabled(false);
                     buttonPregunta2.setBackgroundResource(R.drawable.incorrecto);
                     buttonPregunta2.setEnabled(false);
                 }
                 mostrarIncorrecto("inc");
             }
+            // Si se ha pulsado 3 veces, se muestra un mensaje emergente con la respuesta correcta
             if (contadorDePulsado[2] == 3) {
                 Toast.makeText(getApplicationContext(), "La Respuesta es: 70", Toast.LENGTH_LONG).show();
                 contadorDePulsado[2] = 0;
-                flag[2] = 1;
+                controlPregunta[2] = 1;
             }
 
         });
@@ -127,30 +134,35 @@ public class Nivel1Activity extends AppCompatActivity {
         final EditText inputPregunta3 = findViewById(R.id.editPregunta3);
 
         buttonPregunta3.setOnClickListener(arg0 -> {
-
+            // Si es correcto se deshabilita el campo de texto y el botón
             if (inputPregunta3.getText().toString().equals("1")) {
                 inputPregunta3.setEnabled(false);
                 buttonPregunta3.setBackgroundResource(R.drawable.correcto);
                 buttonPregunta3.setEnabled(false);
+
+                // Si no está en el conjunto de respuestas correctas, añade el n.º de la pregunta
                 mostrarCorrecto("cor");
-                if (flag[3] == 0) {
+                if (controlPregunta[3] == 0) {
                     linkedHashSetCorrectas.add(3);
                 }
 
             } else {
+                // Si es incorrecto se suma 1 al contador de pulsado
                 contadorDePulsado[3] = contadorDePulsado[3] + 1;
+                // Si se ha pulsado 3 veces, se deshabilita el campo de texto y el botón
                 if (contadorDePulsado[3] == 3) {
-                    flag[3] = 1;
+                    controlPregunta[3] = 1;
                     inputPregunta3.setEnabled(false);
                     buttonPregunta3.setBackgroundResource(R.drawable.incorrecto);
                     buttonPregunta3.setEnabled(false);
                 }
                 mostrarIncorrecto("inc");
             }
+            // Si se ha pulsado 3 veces, se muestra un mensaje emergente con la respuesta correcta
             if (contadorDePulsado[3] == 3) {
                 Toast.makeText(getApplicationContext(), "La Respuesta es: 1", Toast.LENGTH_LONG).show();
                 contadorDePulsado[3] = 0;
-                flag[3] = 1;
+                controlPregunta[3] = 1;
             }
 
         });
@@ -159,46 +171,51 @@ public class Nivel1Activity extends AppCompatActivity {
         final EditText inputPregunta4 = findViewById(R.id.editPregunta4);
 
         buttonPregunta4.setOnClickListener(arg0 -> {
-
+            // Si es correcto se deshabilita el campo de texto y el botón
             if (inputPregunta4.getText().toString().equals("3")) {
                 inputPregunta4.setEnabled(false);
                 buttonPregunta4.setBackgroundResource(R.drawable.correcto);
                 buttonPregunta4.setEnabled(false);
+
+                // Si no está en el conjunto de respuestas correctas, añade el n.º de la pregunta
                 mostrarCorrecto("cor");
-                if (flag[4] == 0) {
+                if (controlPregunta[4] == 0) {
                     linkedHashSetCorrectas.add(4);
                 }
 
             } else {
+                // Si es incorrecto se suma 1 al contador de pulsado
                 contadorDePulsado[4] = contadorDePulsado[4] + 1;
+                // Si se ha pulsado 3 veces, se deshabilita el campo de texto y el botón
                 if (contadorDePulsado[4] == 3) {
-                    flag[4] = 1;
+                    controlPregunta[4] = 1;
                     inputPregunta4.setEnabled(false);
                     buttonPregunta4.setBackgroundResource(R.drawable.incorrecto);
                     buttonPregunta4.setEnabled(false);
                 }
                 mostrarIncorrecto("inc");
             }
+            // Si se ha pulsado 3 veces, se muestra un mensaje emergente con la respuesta correcta
             if (contadorDePulsado[4] == 4) {
                 Toast.makeText(getApplicationContext(), "La Respuesta es: 3", Toast.LENGTH_LONG).show();
                 contadorDePulsado[4] = 0;
-                flag[4] = 1;
+                controlPregunta[4] = 1;
             }
 
         });
         // Marcador
         Button marcador = findViewById(R.id.marcador);
         marcador.setOnClickListener(view -> mostrarMarcadores());
-        //Award
-        Button award = findViewById(R.id.premiar);
-        award.setOnClickListener(view -> listaPremios());
-
+        // Premiar
+        Button premiar = findViewById(R.id.premiar);
+        premiar.setOnClickListener(view -> listaPremios());
 
     }
 
     /**
      * Método que muestra el marcador de respuestas correctas.
      * Muestra un mensaje emergente con la puntuación total.
+     * Recibe el conjunto de respuestas correctas y calcula la puntuación.
      *
      * @see Toast
      * @see LinkedHashSet
@@ -218,7 +235,6 @@ public class Nivel1Activity extends AppCompatActivity {
      * @see AlertDialog
      */
     public void mostrarCorrecto(String view) {
-
         AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
         mensaje.setMessage("¡Enhorabuena, respuesta correcta!")
                 .setPositiveButton("Continuar...", (dialogInterface, i) -> dialogInterface.dismiss())
@@ -236,7 +252,6 @@ public class Nivel1Activity extends AppCompatActivity {
      * @see AlertDialog
      */
     public void mostrarIncorrecto(String view) {
-
         AlertDialog.Builder mensaje = new AlertDialog.Builder(this);
         mensaje.setMessage("¡Vaya! Respuesta Incorrecta")
                 .setPositiveButton("Inténtalo de nuevo...", (dialogInterface, i) -> dialogInterface.dismiss())
@@ -253,7 +268,7 @@ public class Nivel1Activity extends AppCompatActivity {
     public void reiniciarContadores() {
         for (int i = 0; i < contadorDePulsado.length; i++) {
             contadorDePulsado[i] = 0;
-            flag[i] = 0;
+            controlPregunta[i] = 0;
         }
     }
 
@@ -274,7 +289,6 @@ public class Nivel1Activity extends AppCompatActivity {
             experto(marcador);
         }
     }
-
 
     public void novato(int marcadores) {
         mostrarPremio("novato", marcadores, R.drawable.novato);
@@ -299,7 +313,7 @@ public class Nivel1Activity extends AppCompatActivity {
      *
      * @param premio     Nombre del premio.
      * @param marcadores Puntuación total.
-     * @param icono      Ícono del premio.
+     * @param icono      Icono del premio.
      * @see AlertDialog
      */
     private void mostrarPremio(String premio, int marcadores, int icono) {

@@ -66,7 +66,6 @@ public class EnviarCorreoActivity extends AppCompatActivity {
         // Aquí se enviaría el correo
         Intent intentEmail = new Intent(Intent.ACTION_SEND);
         intentEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{sender});
-
         intentEmail.putExtra(Intent.EXTRA_SUBJECT, subject);
         intentEmail.putExtra(Intent.EXTRA_TEXT, message);
         intentEmail.setType("message/rfc822");
