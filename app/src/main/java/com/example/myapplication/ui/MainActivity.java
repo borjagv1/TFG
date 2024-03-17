@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.ui.bd.Session;
 import com.example.myapplication.ui.guia_mail.GuiaMatesMailActivity;
-import com.example.myapplication.ui.juego.JuegoActivity;
+import com.example.myapplication.ui.niveles.JuegoActivity;
 import com.example.myapplication.ui.registrar.LoginActivity;
 
 /**

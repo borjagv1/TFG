@@ -26,7 +26,7 @@
         <activity android:name=".ui.registrar.LoginActivity"/>
         <activity android:name=".ui.MainActivity"/>
         <activity android:name=".ui.registrar.RegistroActivity"/>
-        <activity android:name=".ui.juego.JuegoActivity"/>
+        <activity android:name=".ui.niveles.JuegoActivity"/>
         <activity android:name=".ui.guia_mail.GuiaMatesMailActivity"/>
         <activity android:name=".ui.guia_mail.EnviarCorreoActivity"/>
     </application>

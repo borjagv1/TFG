@@ -62,3 +62,5 @@ w
 Gapp/src/main/java/com/example/myapplication/ui/juego/JuegoActivity.java,1\6\16660d48f8bde251449c699694ed7e69561ee682
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+y
+Iapp/src/main/java/com/example/myapplication/ui/niveles/JuegoActivity.java,e\b\eb8e493ba464b625e4c094953e2781364d8e961f

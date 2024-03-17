@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.juego;
+package com.example.myapplication.ui.niveles;
 
 import android.os.Bundle;
 import android.widget.Button;
