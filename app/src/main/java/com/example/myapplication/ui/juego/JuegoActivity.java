@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.niveles;
+package com.example.myapplication.ui.juego;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -19,7 +19,7 @@ import java.util.Set;
  * @author Borja Guerra
  * @version 1.0
  */
-public class Nivel1Activity extends AppCompatActivity {
+public class JuegoActivity extends AppCompatActivity {
     /**
      * Conjunto que almacena el n.º de las respuestas correctas.
      * @see LinkedHashSet Mantiene el orden de inserción.
@@ -325,5 +325,5 @@ public class Nivel1Activity extends AppCompatActivity {
                 .create();
         mensaje.show();
     }
-} // Fin de la clase Nivel1Activity
+} // Fin de la clase JuegoActivity
 

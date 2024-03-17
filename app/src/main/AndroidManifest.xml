@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.myapplication"
           xmlns:tools="http://schemas.android.com/tools">
 
     <application
@@ -25,7 +26,7 @@
         <activity android:name=".ui.registrar.LoginActivity"/>
         <activity android:name=".ui.MainActivity"/>
         <activity android:name=".ui.registrar.RegistroActivity"/>
-        <activity android:name=".ui.niveles.Nivel1Activity"/>
+        <activity android:name=".ui.juego.JuegoActivity"/>
         <activity android:name=".ui.guia_mail.GuiaMatesMailActivity"/>
         <activity android:name=".ui.guia_mail.EnviarCorreoActivity"/>
     </application>

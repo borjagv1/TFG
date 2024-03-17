@@ -49,3 +49,16 @@ Sapp/src/main/java/com/example/myapplication/ui/guia_mail/GuiaMatesMailActivity.
 Kapp/src/main/java/com/example/myapplication/ui/registrar/LoginActivity.java,5\3\5323b082ad956be60732e8c42dec7119936a89be
 ~
 Napp/src/main/java/com/example/myapplication/ui/registrar/RegistroActivity.java,3\d\3dcbea6dee86f77e06be1e28acd5d2b8f4506911
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+F
+app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+~
+Napp/src/main/java/com/example/myapplication/ui/MainActivity_onCreate_flow.puml,d\b\dbce6abd87952243c147ae8295a8aaca02f698a3
+w
+Gapp/src/main/java/com/example/myapplication/ui/juego/JuegoActivity.java,1\6\16660d48f8bde251449c699694ed7e69561ee682
+X
+(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e

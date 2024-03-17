@@ -7,6 +7,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
 
+
 /**
  * Clase que gestiona la actividad de enviar correo.
  * @version 1.0

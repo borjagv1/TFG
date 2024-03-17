@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.ui.bd.Session;
 import com.example.myapplication.ui.guia_mail.GuiaMatesMailActivity;
-import com.example.myapplication.ui.niveles.Nivel1Activity;
+import com.example.myapplication.ui.juego.JuegoActivity;
 import com.example.myapplication.ui.registrar.LoginActivity;
 
 /**
@@ -18,7 +18,7 @@ import com.example.myapplication.ui.registrar.LoginActivity;
  * @see LoginActivity
  * @see MediaPlayer
  * @see Session
- * @see Nivel1Activity
+ * @see JuegoActivity
  * author Borja Guerra
  */
 public class MainActivity extends AppCompatActivity {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     // javadoc
     /**
      * Método que configura los listeners de los botones.
-     * @see Nivel1Activity
+     * @see JuegoActivity
      * @see GuiaMatesMailActivity
      * @see Session
      * @see MediaPlayer
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private void configurarListenersBotones() {
         // Botón 1 - Nivel 1
         Button btnNivel1 = findViewById(R.id.button);
-        btnNivel1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Nivel1Activity.class)));
+        btnNivel1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, JuegoActivity.class)));
        // Botón 2 - Guía y Mail
         Button btnForo = findViewById(R.id.button2);
         btnForo.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, GuiaMatesMailActivity.class)));
