@@ -36,6 +36,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+            <!--ems es para ajustar el ancho del campo, viene a decir que es de unas 10 "M"-->
             <EditText
                     android:text="@string/correoElectronico"
                     android:hint="@string/e_mail_enviar"
@@ -43,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
+                    android:enabled="false"
                     android:layout_marginTop="50dp"
                     android:id="@+id/editText" android:autofillHints="Tu e-mail"/>
 

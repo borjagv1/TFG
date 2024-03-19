@@ -33,6 +33,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
 
     /**
      * @param db Mi Base de Datos.
+     * La tabla se creará solo la primera vez que se ejecute la aplicación y se requiera la base de datos.
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -43,6 +44,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
      * @param db         Mi base de datos.
      * @param oldVersion La antigua versión de la base de datos.
      * @param newVersion La nueva versión de la base de datos.
+     * Útil cuando quiera realizar cambios en la estructura de la base de datos en futuras versiones de la aplicación
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -79,6 +81,8 @@ public class MyDbHelper extends SQLiteOpenHelper {
         String selectQuery = "select * from " + TABLE_NAME + " where " + C_EMAIL + " = " + "'" + email + "'" + " and " + C_PASSWORD + " = " + "'" + password + "'";
         SQLiteDatabase db = this.getReadableDatabase();
         // Objeto cursor que permite leer los resultados de una consulta. Situado antes del primer resultado.
+        // selectionArgs: null → indica que no hay valores adicionales que proporcionar y la consulta se ejecutará
+        // sin necesidad de reemplazar ningún placeholder ('?')
         android.database.Cursor cursor = db.rawQuery(selectQuery, null);
         // Muevo el cursor al primer resultado.
         cursor.moveToFirst();
