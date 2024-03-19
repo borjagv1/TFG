@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Permite a los usuarios desplazarse verticalmente a través de su contenido si este excede el tamaño de la pantalla-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/material_dynamic_primary80">
 
+    <!--Organiza los elementos en una cuadrícula fija (una sola dirección)-->
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

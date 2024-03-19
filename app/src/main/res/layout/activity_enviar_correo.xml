@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Posicionar elementos relativos entre sí (debajo encima izquierda derecha de)-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -21,7 +22,7 @@
             android:id="@+id/textviewmail"
             android:textColor="@color/md_red_900"/>
 
-
+    <!--Permite a los usuarios desplazarse verticalmente a través de su contenido si este excede el tamaño de la pantalla-->
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,7 +31,7 @@
             android:scrollbars="vertical"
             android:id="@+id/scrollView">
 
-
+        <!--Organiza los elementos en una cuadrícula fija (una sola dirección)-->
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"

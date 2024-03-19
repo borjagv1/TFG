@@ -49,7 +49,7 @@ public class JuegoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nivel1);
+        setContentView(R.layout.activity_juego);
 
         linkedHashSetCorrectas.clear();
 

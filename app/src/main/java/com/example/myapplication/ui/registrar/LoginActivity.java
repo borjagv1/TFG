@@ -74,6 +74,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * Método que se ejecuta al pulsar el botón de login.
      * Comprueba si el usuario y contraseña son correctos.
      */
+    // TODO Comprobar si el usuario y contraseña son correctos. También en registrarseActivity
     public void login(View v) {
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();

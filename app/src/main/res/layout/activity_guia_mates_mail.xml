@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Posicionar elementos relativos entre sí (debajo encima izquierda derecha de)-->
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
@@ -18,18 +19,18 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"/>
 
-
+    <!--Permite a los usuarios desplazarse verticalmente a través de su contenido si este excede el tamaño de la pantalla-->
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true">
-
+        <!--Posicionar elementos relativos entre sí (debajo encima izquierda derecha de)-->
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
+            <!--Organiza los elementos en una cuadrícula fija (una sola dirección)-->
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -106,6 +107,8 @@
                         android:textStyle="bold"
                         android:text="@string/sugerencias"/>
 
+                <!--Contenedor para coordinar las interacciones entre los elementos secundarios de la interfaz de usuario (animaciones)-->
+                <!--Es útil para FloatingActionButton-->
                 <androidx.coordinatorlayout.widget.CoordinatorLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
